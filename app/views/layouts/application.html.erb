@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= content_for?(:title) ? yield(:title) : "This is my final project!" %></title>
+
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+</head>
+
+<body>
+  <div class='row'>
+    <ul>
+      <li><a class="active" href="http://localhost:3000/">Home</a></li>
+      <li><a href="http://localhost:3000/actors">Actors</a></li>
+      <li><a href="http://localhost:3000">Back</a></li>
+      <li><a href="http://localhost:3000/actors">Forward</a></li>
+    </ul>
+    <%= yield %>
+
+
+
+
+    <footer class="social-footer">
+      <div class="social-footer-left">
+        <a href="#"><img class="logo" src="http://placehold.it/150x30"></a>
+      </div>
+      <div class="social-footer-icons">
+        <ul class="menu simple">
+          <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+          <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+
+
+
+
+
+    <%= javascript_include_tag "application" %>
+  </body>
+  </html>
